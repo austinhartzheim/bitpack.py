@@ -12,6 +12,9 @@ class BitPack():
         if b64:
             self.data = base64.decodestring(self.data)
 
+    def base64(self):
+        return base64.encodestring(self.data)
+
     def byte_at(self, index):
         return self.data[index]
 
