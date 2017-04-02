@@ -13,7 +13,7 @@ class BitPack():
             self.data = base64.decodestring(self.data)
 
     def base64(self):
-        return base64.encodestring(self.data)
+        return base64.b64encode(self.data)
 
     def byte_at(self, index):
         return self.data[index]

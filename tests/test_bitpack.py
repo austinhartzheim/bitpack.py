@@ -339,9 +339,9 @@ class TestBitPackBitAt(unittest.TestCase):
 class TestBitPackBase64(unittest.TestCase):
 
     def test_base64_happy_path(self):
-        bp = BitPack(base64.encodestring(b'\x00\xf0'))
+        bp = BitPack(base64.b64encode(b'\x00\xf0'))
 
-        self.assertEqual(bp.base64(), base64.encodestring(b'\x00\xf0'))
+        self.assertEqual(bp.base64(), base64.b64encode(b'\x00\xf0'))
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
